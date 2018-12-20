@@ -24,6 +24,10 @@ export class AppComponent implements OnDestroy {
     this.router.navigate(['login']);
   }
 
+  goToRoute(route: string) {
+    this.router.navigate([route]);
+  }
+
   isLoggedIn() {
     //ToDo - get from a service
     return !(localStorage.getItem('user') === null);
