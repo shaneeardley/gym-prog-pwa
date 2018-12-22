@@ -1,0 +1,10 @@
+<p *ngIf="isNewExercise">New Exercise</p>
+<p *ngIf="!isNewExercise && selectedExercise">Edit Exercise {{selectedExercise.name}}</p>
+<button class="btn btn-primary" (click)="addDemoButton()" type="button">Add Demo Exercise</button>
+
+<div *ngIf="selectedExercise">
+  <input aria-describedby="name" class="form-control" id="name" placeholder="Enter name"
+         [(ngModel)]="selectedExercise.name">
+  <input aria-describedby="description" class="form-control" id="description" placeholder="Enter description"
+         [(ngModel)]="selectedExercise.description">
+</div>

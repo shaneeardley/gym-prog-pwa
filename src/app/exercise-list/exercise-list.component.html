@@ -1,0 +1,17 @@
+<p>
+  List of exercises
+</p>
+<button class="btn btn-primary" (click)="addNew()" type="button">Add New Exercise</button>
+
+<div *ngFor="let exercise of list | async">
+
+  <div class="card col-md-3">
+    <div class="card-body">
+      <h5 class="card-title">Name:  {{exercise.name}}</h5>
+      <p class="card-text">Description: {{exercise.description}}</p>
+      <button class="btn btn-primary" (click)="editExercise(exercise)" type="button">Edit Exercise</button>
+    </div>
+  </div>
+
+
+</div>
